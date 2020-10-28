@@ -4,7 +4,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
         npm install
         npm run-script deploy
     - name: Deploy
-      uses: ivione93/my-app-angular@main
+      uses: ivione93/my-app-angular@master
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
